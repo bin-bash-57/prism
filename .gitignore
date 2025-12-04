@@ -1,0 +1,22 @@
+# Python & Environment
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+
+# Data & Models (Too big for Git)
+*.mp4
+*.avi
+*.mov
+model_repository/yolov8/1/model.onnx
+# We ignore the model file but keep the config
+!model_repository/yolov8/config.pbtxt
+
+# Docker & Logs
+*.log
+docker-compose.override.yml
+
+# IDEs
+.vscode/
+.idea/

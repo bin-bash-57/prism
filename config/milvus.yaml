@@ -1,0 +1,7 @@
+host: "localhost"
+port: "19530"
+collection:
+  name: "video_detections"
+  dim: 8400
+  index_type: "IVF_FLAT"
+  metric_type: "L2"

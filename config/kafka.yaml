@@ -1,0 +1,6 @@
+broker: "localhost:9092"
+topics:
+  ingestion: "video_frames"
+consumer:
+  group_id: "prism_processor_group"
+  auto_offset_reset: "latest"
