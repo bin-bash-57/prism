@@ -1,4 +1,4 @@
-from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
+from fastapi import APIRouter, UploadFile, File, HTTPException
 import numpy as np
 import cv2
 from src.prism.inference.triton_client import TritonClient

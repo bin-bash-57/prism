@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import cv2
 import uvicorn
-from typing import List
 
 from src.prism.inference.triton_client import TritonClient
 from src.prism.database.milvus_client import MilvusClient

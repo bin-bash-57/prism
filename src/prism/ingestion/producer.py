@@ -3,7 +3,6 @@ import time
 import os
 import cv2
 import base64
-import sys
 from confluent_kafka import Producer
 from src.prism.ingestion.video_reader import VideoReader
 

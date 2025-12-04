@@ -1,6 +1,5 @@
 from ultralytics import YOLO
 import os
-import onnx
 
 
 model_path = "model_repository/yolov8/1"

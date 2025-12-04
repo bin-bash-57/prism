@@ -8,8 +8,8 @@ from pymilvus import (
 )
 from src.prism.exceptions import (
     MilvusConnectionError,
-    CollectionNotFoundError,
     VectorInsertionError,
+    DatabaseError,
 )
 
 """
