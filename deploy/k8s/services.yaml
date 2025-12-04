@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prism-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: prism-api
+  template:
+    metadata:
+      labels:
+        app: prism-api
+    spec:
+      containers:
+      - name: api
+        image: your-dockerhub-username/prism-api:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: KAFKA_BROKER
+          value: "kafka:9092"
+        - name: MILVUS_HOST
+          value: "milvus"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prism-processor
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: prism-processor
+  template:
+    metadata:
+      labels:
+        app: prism-processor
+    spec:
+      containers:
+      - name: processor
+        image: your-dockerhub-username/prism-processor:latest
+        env:
+        - name: KAFKA_BROKER
+          value: "kafka:9092"

@@ -2,6 +2,7 @@ import numpy as np
 import requests
 import json
 
+
 class TritonClient:
     def __init__(self, url: str = "localhost:8000"):
         if not url.startswith("http"):
@@ -17,21 +18,21 @@ class TritonClient:
                     "name": "images",
                     "shape": input_data.shape,
                     "datatype": "FP32",
-                    "data": input_data.tolist()
+                    "data": input_data.tolist(),
                 }
             ]
         }
         try:
             response = requests.post(endpoint, json=payload, timeout=60.0)
-            
+
             if response.status_code != 200:
                 print(f"TRITON ERROR RESPONSE: {response.text}")
                 response.raise_for_status()
             result = response.json()
-            output_data = result['outputs'][0]['data']
-            dims = result['outputs'][0]['shape']
+            output_data = result["outputs"][0]["data"]
+            dims = result["outputs"][0]["shape"]
             return np.array(output_data).reshape(dims)
 
         except requests.exceptions.RequestException as e:
             print(f"CONNECTION ERROR: {e}")
-            raise e  
+            raise e

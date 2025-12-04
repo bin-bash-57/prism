@@ -9,9 +9,11 @@ router = APIRouter()
 triton_client = TritonClient()
 vector_store = VectorStore()
 
+
 @router.get("/health")
 async def health():
     return {"status": "ok"}
+
 
 @router.post("/search")
 async def search(file: UploadFile = File(...), top_k: int = 5):
@@ -28,7 +30,7 @@ async def search(file: UploadFile = File(...), top_k: int = 5):
         vector_output = triton_client.infer("yolov8", img_input)
         query_vector = vector_output.flatten()[:8400].tolist()
         results = vector_store.search_image(query_vector, top_k)
-        
+
         return {"matches": results}
 
     except Exception as e:
